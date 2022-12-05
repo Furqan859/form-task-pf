@@ -6,11 +6,24 @@ function handleFormSubmit(event) {
     let formJSON = Object.fromEntries(data.entries());
     let dataObj = JSON.stringify(formJSON,null,2);
     localStorage.setItem('dataObj', dataObj);
-
+    // form.form.reset();
 }
 
-let form = document.querySelector('.form');
-form.addEventListener('submit', handleFormSubmit);
+    let form = document.querySelector('.form');
+    form.addEventListener('submit', handleFormSubmit);
+
+
+
+    
+function saveDynamicDataToFile() {
+
+    var userInput = form.value;
+    
+    var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, "dynamic.txt");
+}
+
+
 
 
 function fileValidation(field) {
@@ -49,6 +62,9 @@ function dateEndChange(extension) {
 
     }
 }
+
+
+
 
 
 

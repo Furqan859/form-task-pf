@@ -24,13 +24,11 @@
             </div>
             <div>
                 <label for="start">Start date:</label><br>
-                <input class="input-field" type="date" id="start" name="start-date" value="2022-07-22" min="1980-01-01"
-                    max="2024-12-31" onchange="return dateStartChange(this)" >
+                <input class="input-field" type="date" id="start" name="start-date"  onchange="return dateStartChange(this)" >
             </div>
             <div>
                 <label for="start">End date:</label><br>
-                <input class="input-field" type="date" id="end" name="end-date" value="202-08-22" min="1980-01-01"
-                    max="2024-12-31" onchange="return dateEndChange(this)">
+                <input class="input-field" type="date" id="end" name="end-date"  onchange="return dateEndChange(this)">
             </div>
             <input class="input-field" type="file" id="uploadFile" name="filename" onchange="return fileValidation(this)" />
             <div id="imagePreview"></div>
@@ -40,6 +38,9 @@
 
     </div>
   
+
+
+    <div><button onclick="saveDynamicDataToFile()">Download</button></div>
 
    <script src="Index.js"></script>
 </body>
