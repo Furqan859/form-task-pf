@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="overview">
+        <form class="form" >
+            <div>
+                <label for="fname">Name</label><br>
+                <input class="input-field" type="text" id="fname" name="name" placeholder="Your name..">
+            </div>
+            <div>
+                <label for="birthday">Date of Birth:</label><br>
+                <input class="input-field" type="date" id="birthday" name="birthday">
+            </div>
+            <div>
+                <label for="start">Start date:</label><br>
+                <input class="input-field" type="date" id="start" name="start-date" value="2022-07-22" min="1980-01-01"
+                    max="2024-12-31" onchange="return dateStartChange(this)" >
+            </div>
+            <div>
+                <label for="start">End date:</label><br>
+                <input class="input-field" type="date" id="end" name="end-date" value="202-08-22" min="1980-01-01"
+                    max="2024-12-31" onchange="return dateEndChange(this)">
+            </div>
+            <input class="input-field" type="file" id="uploadFile" name="filename" onchange="return fileValidation(this)" />
+            <div id="imagePreview"></div>
+            <input  class="button" type="submit" value="Submit">
+        </form>
+
+
+    </div>
+  
+
+   <script src="Index.js"></script>
+</body>
+
+</html>
