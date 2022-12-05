@@ -1,31 +1,18 @@
 
-
+// form handling
 function handleFormSubmit(event) {
     event.preventDefault();
     let data = new FormData(event.target);
     let formJSON = Object.fromEntries(data.entries());
     let dataObj = JSON.stringify(formJSON,null,2);
-    localStorage.setItem('dataObj', dataObj);
-    // form.form.reset();
+    localStorage.setItem('dataObj', dataObj);   
 }
 
     let form = document.querySelector('.form');
     form.addEventListener('submit', handleFormSubmit);
 
 
-
-    
-function saveDynamicDataToFile() {
-
-    var userInput = form.value;
-    
-    var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
-    saveAs(blob, "dynamic.txt");
-}
-
-
-
-
+// file validation
 function fileValidation(field) {
     var fileInput = document.getElementById('uploadFile').value;
     var allowExtension = /(\.pdf|\.doc)$/i;
@@ -38,7 +25,7 @@ function fileValidation(field) {
 
 }
 
-
+// start date validation
 function dateStartChange(extension) {
     var EndDate = document.getElementById('end').value;
     var StartDate = document.getElementById('start').value;
@@ -50,6 +37,8 @@ function dateStartChange(extension) {
 
     }
 }
+
+// end date validation
 
 function dateEndChange(extension) {
     var EndDate = document.getElementById('end').value;
